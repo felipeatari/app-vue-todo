@@ -57,12 +57,11 @@ const props = defineProps({
 const title = ref(props.todo.title)
 const completed = ref(props.todo.completed)
 const oldTitle = ref('')
+const store = useStore()
 
 watch(title, (newTitleParam, oldTitleParam) => {
     oldTitle.value = oldTitleParam
 })
-
-const store = useStore()
 
 const updateTodo = () => {
     const payload = {

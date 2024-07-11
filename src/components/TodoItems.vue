@@ -11,5 +11,6 @@
 <script setup>
 import TodoItem from '@/components/TodoItem.vue'
 import { useStore } from 'vuex';
+
 const store = useStore()
 </script>
