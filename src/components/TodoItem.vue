@@ -7,7 +7,7 @@
                         'text-green-500': completed,
                         'text-gray-400': !completed
                     }"
-                    @click="todoCompleted"
+                    @click="updateTodoCompleted"
                 >
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -22,14 +22,14 @@
                     v-model="title"
                     type="text" placeholder="Digite a sua tarefa"
                     class="bg-gray-300 placeholder-gray-500 text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3"
-                    @keyup.enter="todoTitle"
+                    @keyup.enter="updateTodoTitle"
                 >
             </div>
 
             <div class="ml-auto flex items-center justify-center">
                 <button 
                     class="focus:outline-none"
-                    @click="onDelete"
+                    @click="deleteTodo"
                 >
                     <svg class="ml-3 h-4 w-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@ const updateTodo = () => {
     store.dispatch('updateTodo', payload)
 }
 
-const todoTitle = () => {
+const updateTodoTitle = () => {
     if (!title.value) {
         title.value = oldTitle.value
 
@@ -87,13 +87,13 @@ const todoTitle = () => {
     updateTodo()
 }
 
-const todoCompleted = () => {
+const updateTodoCompleted = () => {
     completed.value = !completed.value
 
     updateTodo()
 }
 
-const onDelete = () => {
+const deleteTodo = () => {
     store.dispatch('deleteTodo', props.todo.id)
 }
 </script>

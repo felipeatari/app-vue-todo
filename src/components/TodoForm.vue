@@ -1,6 +1,6 @@
 <template>
     <form
-        @submit.prevent="addTodo"
+        @submit.prevent="postTodo"
         class="flex items-center px-4 bg-gray-900 h-15 rounded-sm border-l-2 border-green-400 mb-3"
         >
         <input
@@ -23,7 +23,7 @@ import { useStore } from 'vuex';
 const title = ref('')
 const store = useStore()
 
-const addTodo = ()=> {
+const postTodo = ()=> {
     if (!title.value) return
 
     const payload = {
