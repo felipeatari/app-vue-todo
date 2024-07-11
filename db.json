@@ -12,7 +12,7 @@
     },
     {
       "title": "Estudar AWS",
-      "computed": false,
+      "completed": false,
       "id": 3
     }
   ]
