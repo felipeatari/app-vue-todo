@@ -27,3 +27,15 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Baixar Back-End fake
+
+```sh
+npm install -g json-server@0.17.4
+```
+
+### Subir Back-End fake
+
+```sh
+json-server --watch db.json
+```
