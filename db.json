@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "Estudar Laravel 11",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": "Estudar Vue.js 3",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "Estudar AWS",
+      "computed": false,
+      "id": 3
+    }
+  ]
+}
